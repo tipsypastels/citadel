@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/entity/PlayerEntity/PlayerEntity.tscn" type="PackedScene" id=1]
+[ext_resource path="res://roomtest.png" type="Texture" id=2]
+[ext_resource path="res://room_test_object.png" type="Texture" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Area2D" type="StaticBody2D" parent="YSort"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="roomtest" type="Sprite" parent="YSort/Area2D"]
+position = Vector2( 173.105, 102.691 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Area2D"]
+polygon = PoolVector2Array( 132, 64, 146.375, 71.125, 180.125, 54.125, 235.5, 81.875, 234.875, 108.75, 180.375, 82.5, 146.25, 99, 131.75, 92.5 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="YSort/Area2D"]
+polygon = PoolVector2Array( 131.625, 92.625, 119.25, 99, 131.625, 105, 126.25, 109.875, 180.25, 137.625, 234.25, 109.5, 235.25, 109.125, 235.75, 117, 180.125, 143.375, 125, 116.125, 124.875, 110.25, 118.5, 105 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 189.151, 106.773 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( 168.712, 106.463, 196.293, 120.7, 209.538, 113.259, 178.98, 97.4346, 168.464, 106.116 )
+
+[node name="PlayerEntity" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 166.598, 111.362 )

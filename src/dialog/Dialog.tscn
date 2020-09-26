@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/dialog/Dialog.cs" type="Script" id=1]
+[ext_resource path="res://src/dialog/DialogText.cs" type="Script" id=2]
+
+[node name="Dialog" type="Polygon2D"]
+position = Vector2( -0.182327, -47.1348 )
+scale = Vector2( 0.25, 0.324074 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0.72937, 592.873, 0.729309, 700.873, 1280.73, 700.873, 1280.73, 592.873 )
+script = ExtResource( 1 )
+
+[node name="DialogText" type="RichTextLabel" parent="."]
+margin_left = 20.0
+margin_top = 603.0
+margin_right = 1260.0
+margin_bottom = 691.0
+bbcode_enabled = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="DialogText"]
+wait_time = 0.02
+[connection signal="timeout" from="DialogText/Timer" to="DialogText" method="_OnTimerAdvance"]

@@ -1,0 +1,6 @@
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/bin/Debug/Citadel.dll
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/bin/Debug/Citadel.pdb
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/obj/Debug/Citadel.csprojAssemblyReference.cache
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/obj/Debug/Citadel.csproj.CoreCompileInputs.cache
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/obj/Debug/Citadel.dll
+/home/dakota/Documents/Gamedev/Godot/Citadel/.mono/temp/obj/Debug/Citadel.pdb
